@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Galería</title>
+<title>Contacto</title>
 
 <style>
 body{
-  margin:0;
   font-family:Arial;
   background:linear-gradient(135deg,#1f4037,#99f2c8);
   color:white;
   text-align:center;
+  margin:0;
 }
 
 /* MENU */
@@ -28,68 +28,34 @@ body{
   font-weight:bold;
 }
 
-/* GALERIA ORDENADA */
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-  gap:25px;
-  padding:100px 20px;
+.container{
+  margin-top:100px;
 }
 
-/* TARJETAS */
-.card{
+/* FORM */
+form{
   background:rgba(255,255,255,0.1);
+  padding:20px;
   border-radius:15px;
-  padding:15px;
-  box-shadow:0px 4px 15px rgba(0,0,0,0.3);
-  transition:0.3s;
+  width:300px;
+  margin:auto;
 }
 
-.card:hover{
-  transform:scale(1.05);
-}
-
-/* IMÁGENES */
-.card img{
+input, textarea{
   width:100%;
-  height:250px;
-  object-fit:cover;
-  border-radius:10px;
-  cursor:pointer;
+  padding:10px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
 }
 
-/* BOTONES */
-.btn{
-  margin:5px;
-  padding:8px 12px;
+button{
+  background:#ff6b6b;
+  color:white;
+  padding:10px;
   border:none;
   border-radius:10px;
   cursor:pointer;
-}
-
-.like{
-  background:#ff6b6b;
-  color:white;
-}
-
-.interes{
-  background:#4CAF50;
-  color:white;
-}
-
-/* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.9);
-  justify-content:center;
-  align-items:center;
-}
-
-.modal img{
-  max-width:80%;
 }
 </style>
 </head>
@@ -102,133 +68,22 @@ body{
 <a href="contacto.html">Contacto</a>
 </div>
 
-<h2 style="margin-top:80px;">Mis Obras</h2>
+<div class="container">
+<h2>Contáctame</h2>
 
-<div class="galeria">
+<form>
+<input type="text" placeholder="Tu nombre">
+<input type="email" placeholder="Tu correo">
+<textarea placeholder="Escribe tu mensaje"></textarea>
+<button>Enviar</button>
+</form>
 
-<!-- REPITE ESTE BLOQUE PARA TODAS -->
-
-<div class="card">
-<img src="cuadro1.jpeg" onclick="abrir(this.src)">
-<h3>Obra 1</h3>
-
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro2.jpeg" onclick="abrir(this.src)">
-<h3>Obra 2</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro3.jpg" onclick="abrir(this.src)">
-<h3>Obra 3</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro4.jpg" onclick="abrir(this.src)">
-<h3>Obra 4</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro5.jpg" onclick="abrir(this.src)">
-<h3>Obra 5</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro6.jpg" onclick="abrir(this.src)">
-<h3>Obra 6</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro7.jpg" onclick="abrir(this.src)">
-<h3>Obra 7</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro8.jpg" onclick="abrir(this.src)">
-<h3>Obra 8</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro9.jpg" onclick="abrir(this.src)">
-<h3>Obra 9</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro10.jpg" onclick="abrir(this.src)">
-<h3>Obra 10</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
-
-<div class="card">
-<img src="cuadro11.jpg" onclick="abrir(this.src)">
-<h3>Obra 11</h3>
-<button class="btn like" onclick="like(this)">❤️</button>
-<button class="btn interes" onclick="window.location.href='contacto.html'">
-Estoy interesado
-</button>
-</div>
+<p style="margin-top:20px;">
+📩 También puedes escribir directamente a:<br>
+<b>rosalyhirujo01@gmail.com</b>
+</p>
 
 </div>
-
-<!-- MODAL -->
-<div id="modal" class="modal" onclick="cerrar()">
-<img id="imgGrande">
-</div>
-
-<script>
-function abrir(src){
-document.getElementById("modal").style.display="flex";
-document.getElementById("imgGrande").src=src;
-}
-
-function cerrar(){
-document.getElementById("modal").style.display="none";
-}
-
-function like(el){
-el.style.background="red";
-}
-</script>
 
 </body>
 </html>
